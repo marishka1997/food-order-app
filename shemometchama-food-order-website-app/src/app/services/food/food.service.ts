@@ -28,7 +28,7 @@ return [
   price: 10,
   favourite: false,
   origins: ['Georgia'],
-  star: 4.5,
+  star: 3.2,
   imageUrl: `assets/kalakuri-khinkali.jpg`,
   tags: ['Khinkali']
 }
