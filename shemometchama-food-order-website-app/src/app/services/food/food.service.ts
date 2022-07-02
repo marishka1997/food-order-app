@@ -13,23 +13,23 @@ return [
 {
   id: 1,
   name: 'Kalakuri Khinkali',
-  cookTime: '10-20',
+  cookTime: '30-40',
   price: 10,
   favourite: false,
-  origins: ['georgia'],
+  origins: ['Georgia'],
   star: 4.5,
-  imageUrl: `assets/khinkali/kalakuri-khinkali.jpg`,
+  imageUrl: `assets/kalakuri-khinkali.jpg`,
   tags: ['Khinkali']
 },
 {
   id: 2,
   name: 'Kalakuri Khinkali',
-  cookTime: '10-20',
+  cookTime: '30-40',
   price: 10,
   favourite: false,
-  origins: ['georgia'],
+  origins: ['Georgia'],
   star: 4.5,
-  imageUrl: `assets/khinkali/kalakuri-khinkali.jpg`,
+  imageUrl: `assets/kalakuri-khinkali.jpg`,
   tags: ['Khinkali']
 }
 
