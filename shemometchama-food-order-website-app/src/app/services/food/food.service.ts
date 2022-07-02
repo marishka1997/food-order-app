@@ -9,9 +9,9 @@ export class FoodService {
 
   getAll(): string[] {
 return [
-  `assets/sauce/baje.webpg`,
-  `assets/sauce/satsebeli.webpg`,
-  `assets/sauce/tkemali.webpg`
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`
 ]
   }
 }

@@ -7,9 +7,10 @@ import { FoodService } from '../services/food/food.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+foods: string[] = [];
   constructor(private foodservice: FoodService) { }
   ngOnInit(): void {
+    this.foods = this.foodservice.getAll();
   }
 
 }
