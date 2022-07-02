@@ -6,4 +6,12 @@ import { Injectable } from '@angular/core';
 export class FoodService {
 
   constructor() { }
+
+  getAll(): string[] {
+return [
+  `assets/sauce/baje.webpg`,
+  `assets/sauce/satsebeli.webpg`,
+  `assets/sauce/tkemali.webpg`
+]
+  }
 }
