@@ -11,7 +11,13 @@ export class FoodService {
 return [
   `assets/khinkali/kalakuri-khinkali.jpg`,
   `assets/khinkali/kalakuri-khinkali.jpg`,
-  `assets/khinkali/kalakuri-khinkali.jpg`
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
+  `assets/khinkali/kalakuri-khinkali.jpg`,
 ]
   }
 }
