@@ -11,6 +11,7 @@ searchItem: string = '';
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
+      if (params['searchItem'])
       this.searchItem = params['searchItem'];
     })
   }
