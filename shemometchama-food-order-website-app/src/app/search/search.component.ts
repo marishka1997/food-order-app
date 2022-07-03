@@ -16,5 +16,7 @@ searchItem: string = '';
     })
   }
 search(): void {
+  if(this.searchItem)
+  this.router.navigateByUrl('/search/' + this.searchItem)
 }
 }
