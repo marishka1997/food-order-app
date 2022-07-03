@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Foods } from 'src/app/shared/models/food';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,22 @@ export class FoodService {
     return tag == 'All'
       ? this.getAll()
       : this.getAll().filter((food) => food.tags?.includes(tag));
+  }
+
+  getAllTag(): Tag[] {
+    return [
+      { name: 'All', count: 58 },
+      { name: 'Hot dishes', count: 15},
+      { name: 'Khinkali', count: 6},
+      { name: 'Cold dishes', count: 4},
+      { name: 'Salads', count: 5},
+      { name: 'Pastry', count: 8},
+      { name: 'Fish', count: 3},
+      { name: 'Soups', count: 5},
+      { name: 'Sauce', count: 3},
+      { name: 'Cold drinks', count: 4},
+      { name: 'Alcohol drinks', count: 5}
+    ]
   }
   getAll(): Foods[] {
     return [
