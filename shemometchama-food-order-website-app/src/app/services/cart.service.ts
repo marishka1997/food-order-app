@@ -21,9 +21,9 @@ export class CartService {
     this.cart.items = this.cart.items.filter((item) => item.food.id != foodId);
   }
   changeQuantity(quantity: number, foodId: number) {
-    let cartItem = this.cart.items.find(item => item.food.id === foodId);
-    if(cartItem) return;
-    cartItem.quantity = quantity;
+    let cartItem = this.cart.items.find((item) => item.food.id === foodId);
+    if (cartItem) return;
+    cartItem!.quantity = quantity;
   }
   getCart(): Cart {
     return this.cart;
