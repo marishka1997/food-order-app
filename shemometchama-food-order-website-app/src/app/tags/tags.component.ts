@@ -11,6 +11,9 @@ import { Tag } from '../shared/models/Tag';
 export class TagsComponent implements OnInit {
   @Input()
   foodPageTags?: string[];
+  @Input()
+  justifyContent: string = 'center'
+
   tags?: Tag[] = [];
   constructor(private foodservice: FoodService) {}
 
