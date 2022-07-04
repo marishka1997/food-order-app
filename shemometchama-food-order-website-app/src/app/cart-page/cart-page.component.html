@@ -1,52 +1,58 @@
-<ul>
-  <li *ngFor="let cartItem of cart.items">
-    <div>
-      <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+<div class="container">
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+      </div>
+      <div>
+        <a routerLink="/food/{{ cartItem.food.id }}">
+          {{ cartItem.food.name }}
+        </a>
+      </div>
+      <div>
+        <select
+          #quantitySelect
+          (change)="changeQuantity(cartItem, quantitySelect.value)"
+        >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+        </select>
+      </div>
+      <div>
+        {{ cartItem.price | currency: "GEL" }}
+      </div>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+  <div class="checkout">
+    <div class="food-count">
+      {{ cart.items.length }}
     </div>
-    <div>
-      <a routerLink="/food/{{ cartItem.food.id }}">
-        {{ cartItem.food.name }}
-      </a>
+    <div class="total-count">
+      {{ cart.totalPrice | currency: "GEL" }}
     </div>
-    <div>
-      <select
-        #quantitySelect
-        (change)="changeQuantity(cartItem, quantitySelect.value)">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-        <option>16</option>
-        <option>17</option>
-        <option>18</option>
-        <option>19</option>
-        <option>20</option>
-    </select>
-    </div>
-    <div>
-      {{cartItem.price | currency: 'GEL'}}
-    </div>
-    <div>
-      <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
-    </div>
-  </li>
-</ul>
-<div class="checkout">
-  <div class="food-count">
-    {{cart.items.length}}
-  </div>
-  <div class="total-count">
-    {{cart.totalPrice | currency: 'GEL'}}
+    <a routerLink="/checkout">Proceed to Checkout</a>
   </div>
 </div>
