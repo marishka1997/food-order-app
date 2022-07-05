@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found-page
+  [visible]="!cart || cart.items.length <= 0"
+  notFoundMessage="Cart Page Is Empty"
+  resetLinkText="Go to Product List"
+></app-not-found-page>
+<div *ngIf="cart && cart.items.length > 0" class="container">
   <ul>
     <li *ngFor="let cartItem of cart.items">
       <div>
@@ -47,11 +52,13 @@
     </li>
   </ul>
   <div class="checkout">
-    <div class="food-count">
-      {{ cart.items.length }}
-    </div>
-    <div class="total-count">
-      {{ cart.totalPrice | currency: "GEL" }}
+    <div>
+      <div class="food-count">
+        {{ cart.items.length }}
+      </div>
+      <div class="total-count">
+        {{ cart.totalPrice | currency: "GEL" }}
+      </div>
     </div>
     <a routerLink="/checkout">Proceed to Checkout</a>
   </div>
